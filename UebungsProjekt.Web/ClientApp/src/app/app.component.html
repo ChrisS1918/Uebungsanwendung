@@ -1,0 +1,13 @@
+<div class="toolbar" role="banner">
+  <span class="material-icons logoIcon" (click)="navigate('')">
+    donut_small
+    </span>
+  <span class="navTitle">Angular Übungsanwendung</span>
+  <div class="spacer"></div>
+  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular"
+    title="Twitter"></a>
+  <div *ngFor="let link of links">
+    <div class="navbarLink" [routerLink]="link.link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="navigate(link.link)">{{link.text}}</div>
+  </div>
+</div>
+<router-outlet></router-outlet>

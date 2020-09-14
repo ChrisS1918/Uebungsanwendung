@@ -1,0 +1,24 @@
+<div class="content" role="main">
+  <div class="createUserContainer">
+    <h1>Benutzer anlegen</h1>
+    <form #form="ngForm">
+      <div class="card-container">
+        <mat-form-field>
+          <input matInput placeholder="Vorname" ngModel name="vorname">
+        </mat-form-field>
+      </div>
+      <div class="card-container">
+        <mat-form-field>
+          <input matInput placeholder="Nachname" ngModel name="nachname">
+        </mat-form-field>
+      </div>
+      <div class="card-container">
+          <mat-form-field>
+          <input matInput placeholder="E-Mail Adresse" ngModel name="email">
+        </mat-form-field>
+      </div>
+      <br>
+      <button type="submit" class="submitButton" (click)="submitUser()" mat-raised-button color="primary">Erstellen</button>
+    </form>
+  </div>
+</div>
