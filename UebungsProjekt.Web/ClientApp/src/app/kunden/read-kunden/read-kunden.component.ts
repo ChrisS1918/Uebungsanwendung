@@ -19,16 +19,15 @@ export class ReadKundenComponent implements OnInit {
   passwordAsApiKey = 'ac6c60f49f195c1f0d91dae6d1bd02790GFHWcg3MEg0uFiGHdkgohxrlY9FjokL'
   url = 'https://my.fastbill.com/api/1.0/api.php?OFFSET=CUSTOMERS&=';
   postedData = `
-  <FBAPI>
-  <SERVICE>customer.get</SERVICE>
-  </FBAPI>`;
+  {
+    "SERVICE": "customer.get" 
+  }`;
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':  'application/xml', //<- To SEND XML
-      'Accept':  'application/xml',       //<- To ask for XML
+      'Content-Type':  'application/json', //<- To SEND XML
+      'Accept':  'application/json',       //<- To ask for XML
       'Authorization': 'Basic ' + btoa(this.username + ':' + this.passwordAsApiKey)
-    }),
-    responseType: "text"
+    })
   };
 
   ngOnInit() {
