@@ -13,6 +13,8 @@ export class AppComponent {
     { text: 'Start', link: 'start' },
     { text: 'Benutzer anlegen', link: 'benutzer-anlegen' },
     { text: 'Adresse anlegen', link: 'adresse-anlegen' },
+    { text: 'Info', link: 'info' },
+    { text: 'Kunden', link: 'kunden' },
   ]
 
   navigate(route) {

@@ -1,0 +1,36 @@
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csprojAssemblyReference.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.AssemblyInfoInputs.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.AssemblyInfo.cs
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csproj.CoreCompileInputs.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.deps.json
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csproj.CopyComplete
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.deps.json
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csprojAssemblyReference.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.AssemblyInfoInputs.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.AssemblyInfo.cs
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csproj.CoreCompileInputs.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csproj.CopyComplete
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi - Kopie\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.deps.json
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.Db.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\bin\Debug\netstandard2.1\UebungsProjekt.pdb
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csprojAssemblyReference.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.AssemblyInfoInputs.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.AssemblyInfo.cs
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csproj.CoreCompileInputs.cache
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.csproj.CopyComplete
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.dll
+C:\Users\ChristianStark\source\repos\Übungen\UebungsProjektmitApi-Fastbill\UebungsProjekt.Db\obj\Debug\netstandard2.1\UebungsProjekt.Db.pdb

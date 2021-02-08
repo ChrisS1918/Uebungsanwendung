@@ -1,10 +1,15 @@
+using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using QualityBytes.Core;
+using UebungsProjekt.Db;
+using UebungsProjekt.IoC;
 
 namespace UebungsProjekt
 {
@@ -26,6 +31,15 @@ namespace UebungsProjekt
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddDbContext<UebungsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule<CommandModule>();
+            builder.RegisterModule<QueryModule>();
+            builder.RegisterModule<UseCaseModule>();
+            builder.RegisterType<UebungsContext>().As<IUnitOfWork>().InstancePerLifetimeScope().AsSelf();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

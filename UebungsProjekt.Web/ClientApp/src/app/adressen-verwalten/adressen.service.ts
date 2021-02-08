@@ -10,6 +10,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdressenService extends BaseService<Adresse, CreateAdresseDto, UpdateAdresseDto> {
   constructor(http: HttpClient) {
-    super('/api/benutzer', http);
+    super('/api/address', http);
   }
 }

@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "77dZQCQIsBl/kV1DMEVxRakHCym9R4/EOfJdToGZP4BCtpkkxFhLJicqBiCUkPV4F5KLVTCyLMVbsPQchmqOHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ChristianStark\\source\\repos\\Übungen\\UebungsProjektmitApi-Fastbill\\UebungsProjekt\\UebungsProjekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\jetbrains.annotations\\2020.3.0\\jetbrains.annotations.2020.3.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\microsoft.csharp\\4.4.1\\microsoft.csharp.4.4.1.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\microsoft.extensions.options\\2.0.0\\microsoft.extensions.options.2.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\microsoft.extensions.primitives\\2.0.0\\microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\qualitybytes.core\\0.34.0\\qualitybytes.core.0.34.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\sieve\\2.4.0\\sieve.2.4.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\ChristianStark\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

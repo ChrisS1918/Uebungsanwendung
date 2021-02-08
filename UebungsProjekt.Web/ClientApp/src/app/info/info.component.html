@@ -1,0 +1,23 @@
+<div class="content">
+    <div class="infoContainer">
+        <h1>Informationen</h1>
+        <p>API-URL: <a href="https://localhost:44389/weatherforecast">weatherforecast: 44389</a></p>
+        <mat-accordion class="card-container">
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Systeminformationen
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Allgenmeine Infos
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <ul class="noStyleList" *ngIf="sysInfo | async; let info">
+                    <li>Autor: {{info.authorInfo}}</li>
+                    <li>Datum: {{info.firstApiSetupDate}}</li>
+                    <li>Version: {{info.versionsNummer}}</li>
+                </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

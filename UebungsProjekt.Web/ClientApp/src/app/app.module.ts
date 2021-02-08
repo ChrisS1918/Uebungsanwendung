@@ -9,11 +9,15 @@ import { AdressenModule } from './adressen-verwalten/adressen.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialModule } from './shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InfoComponent } from './info/info.component';
+import { ReadKundenComponent } from './kunden/read-kunden/read-kunden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    InfoComponent,
+    ReadKundenComponent
   ],
   imports: [
     BrowserModule,
