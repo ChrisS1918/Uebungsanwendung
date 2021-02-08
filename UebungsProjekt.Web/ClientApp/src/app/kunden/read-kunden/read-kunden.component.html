@@ -14,48 +14,44 @@
                 <div *ngIf="kunden">
 
                     <table mat-table [dataSource]="kunden" class="mat-elevation-z8 dataTable">
-                    
+
                         <ng-container matColumnDef="CUSTOMER_ID">
-                          <th mat-header-cell *matHeaderCellDef> ID </th>
-                          <td mat-cell *matCellDef="let kunde"> {{kunde.CUSTOMER_ID}} </td>
+                            <th mat-header-cell *matHeaderCellDef> ID </th>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.CUSTOMER_ID}} </td>
                         </ng-container>
-                      
+
                         <ng-container matColumnDef="ORGANIZATION">
                             <th mat-header-cell *matHeaderCellDef> Name </th>
                             <td mat-cell *matCellDef="let kunde"> {{kunde.ORGANIZATION}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="ADDRESS">
-                          <th mat-header-cell *matHeaderCellDef> Adresse </th>
-                          <td mat-cell *matCellDef="let kunde"> {{kunde.ADDRESS}} </td>
+                            <th mat-header-cell *matHeaderCellDef> Adresse </th>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.ADDRESS}} </td>
                         </ng-container>
-                          
+
                         <ng-container matColumnDef="CITY">
-                          <th mat-header-cell *matHeaderCellDef> Ort </th>
-                          <td mat-cell *matCellDef="let kunde"> {{kunde.CITY}} </td>
+                            <th mat-header-cell *matHeaderCellDef> Ort </th>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.CITY}} </td>
                         </ng-container>
-                      
+
                         <ng-container matColumnDef="ZIPCODE">
-                          <th mat-header-cell *matHeaderCellDef> PLZ </th>
-                          <td mat-cell *matCellDef="let kunde"> {{kunde.ZIPCODE}} </td>
+                            <th mat-header-cell *matHeaderCellDef> PLZ </th>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.ZIPCODE}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="COUNTRY_CODE">
                             <th mat-header-cell *matHeaderCellDef> Ländercode </th>
                             <td mat-cell *matCellDef="let kunde"> {{kunde.COUNTRY_CODE}} </td>
-                          </ng-container>
-                      
+                        </ng-container>
+
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                        
-                      </table>
-                    
+
+                    </table>
+
                 </div>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
 </div>
-
-
-
-
