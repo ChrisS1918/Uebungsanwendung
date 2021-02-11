@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using QualityBytes.Core;
 using UebungApi.Customers;
 using UebungsProjekt.Customers.CreateCustomer;
@@ -16,7 +17,7 @@ namespace UebungsProjekt.Db.Customers
 
         public async Task<IResult<Customer[]>> ExecuteAsync(CreateCustomerDto[] dtos)
         {
-            
+            _db.RemoveRange(_db.Customers);
             var entities = dtos.Select(dto => new Customer
             {
                 CUSTOMER_ID = dto.CUSTOMER_ID,

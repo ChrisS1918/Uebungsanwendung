@@ -10,8 +10,8 @@ using UebungsProjekt.Db;
 namespace UebungsProjekt.Db.Migrations
 {
     [DbContext(typeof(UebungsContext))]
-    [Migration("20210211110456_CustomerMigration")]
-    partial class CustomerMigration
+    [Migration("20210211125254_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,10 +47,8 @@ namespace UebungsProjekt.Db.Migrations
 
             modelBuilder.Entity("UebungApi.Customers.Customer", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("CUSTOMER_ID")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ACADEMIC_DEGREE")
                         .HasColumnType("nvarchar(max)");
@@ -95,9 +93,6 @@ namespace UebungsProjekt.Db.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CUSTOMER_ACCOUNT")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CUSTOMER_ID")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CUSTOMER_NUMBER")
@@ -169,7 +164,7 @@ namespace UebungsProjekt.Db.Migrations
                     b.Property<string>("ZIPCODE")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CUSTOMER_ID");
 
                     b.ToTable("Customers");
                 });

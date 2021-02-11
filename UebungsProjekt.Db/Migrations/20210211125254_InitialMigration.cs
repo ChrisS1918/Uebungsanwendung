@@ -3,17 +3,31 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UebungsProjekt.Db.Migrations
 {
-    public partial class CustomerMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Customers",
+                name: "Addresses",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CUSTOMER_ID = table.Column<string>(nullable: true),
+                    Ort = table.Column<string>(nullable: true),
+                    Plz = table.Column<string>(nullable: true),
+                    Straße = table.Column<string>(nullable: true),
+                    Nummer = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Addresses", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Customers",
+                columns: table => new
+                {
+                    CUSTOMER_ID = table.Column<string>(nullable: false),
                     CUSTOMER_NUMBER = table.Column<string>(nullable: true),
                     DAYS_FOR_PAYMENT = table.Column<string>(nullable: true),
                     CREATED = table.Column<DateTime>(nullable: false),
@@ -55,12 +69,15 @@ namespace UebungsProjekt.Db.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Customers", x => x.Id);
+                    table.PrimaryKey("PK_Customers", x => x.CUSTOMER_ID);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Addresses");
+
             migrationBuilder.DropTable(
                 name: "Customers");
         }

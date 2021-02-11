@@ -3,9 +3,9 @@ using QualityBytes.Core.Entity;
 
 namespace UebungApi.Customers
 {
-    public class Customer : IEntityWithId<int>
+    public class Customer : IEntityWithId<string>
     {
-        public int Id { get; set; }
+        public string Id => CUSTOMER_ID;
         public string CUSTOMER_ID { get; set; }
         public string CUSTOMER_NUMBER { get; set; }
         public string DAYS_FOR_PAYMENT { get; set; }
