@@ -11,10 +11,10 @@ import { Customer } from './Kunde';
 })
 export class KundenService extends BaseService<Customer, CreateKundenDto, UpdateKundenDto> {
 
-  baseUrl = '/api/kunde';
+  baseUrl = '/api/kunden';
 
   constructor(http: HttpClient) {
-    super('/api/kunde', http);
+    super('/api/kunden', http);
   }
 
 
@@ -33,9 +33,9 @@ export class KundenService extends BaseService<Customer, CreateKundenDto, Update
 
 
   
-  createFromArray(dtos: CreateKundenDto[]) {
-    console.log(dtos);
-    //return this.http.post<Customer[]>(this.baseUrl, dtos);
+  createFromArray(dtos) {
+    console.log("Baseurl: " + this.baseUrl);
+    return this.http.post<Customer[]>(this.baseUrl, dtos);
 }
 
 

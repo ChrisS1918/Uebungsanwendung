@@ -34,14 +34,14 @@ export class ReadKundenComponent implements OnInit {
   dtos: CreateKundenDto[];
 
   ngOnInit() {
+    console.log("GetCustomers:");
     this.kundenService.getCustomers(this.url, this.postedData, this.httpOptions).subscribe(r => console.log(this.kunden = r));
-    this.saveCustomers();
   }
 
   saveCustomers() {
-
+    this.dtos = Array<CreateKundenDto>();
     for (let kunde in this.kunden) {
-
+      
       this.dtos.push(new CreateKundenDto(
         this.kunden[kunde].CUSTOMER_ID ? this.kunden[kunde].CUSTOMER_ID : undefined,
         this.kunden[kunde].CUSTOMER_NUMBER ? this.kunden[kunde].CUSTOMER_NUMBER : undefined,
@@ -82,12 +82,10 @@ export class ReadKundenComponent implements OnInit {
         this.kunden[kunde].CURRENCY_CODE ? this.kunden[kunde].CURRENCY_CODE : undefined,
         this.kunden[kunde].LASTUPDATE ? this.kunden[kunde].LASTUPDATE : undefined,
         this.kunden[kunde].TAGS ? this.kunden[kunde].TAGS : undefined
-      )
-      )
-
-      //Array übergeben?
-      this.kundenService.createFromArray(this.dtos)//.subscribe();
+        )
+      );
     }
+  this.kundenService.createFromArray(this.dtos).subscribe();
 
   }
 
