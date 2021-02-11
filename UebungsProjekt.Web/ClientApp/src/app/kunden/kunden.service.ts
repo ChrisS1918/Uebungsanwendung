@@ -1,15 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Customer } from './Customer';
+import { BaseService } from '../api/baseService';
+import { CreateKundenDto } from '../api/kunden/create-kunden-dto';
+import { UpdateKundenDto } from '../api/kunden/update-kunde-dto';
+import { Customer } from './Kunde';
 
 @Injectable({
   providedIn: 'root'
 })
-export class KundenService {
+export class KundenService extends BaseService<Customer, CreateKundenDto, UpdateKundenDto> {
 
+  baseUrl = '/api/kunde';
 
-  constructor(private readonly http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super('/api/kunde', http);
+  }
 
 
   getCustomers(url, postedData, httpOptions) {
@@ -24,4 +30,13 @@ export class KundenService {
       })
     );
   }
+
+
+  
+  createFromArray(dtos: CreateKundenDto[]) {
+    console.log(dtos);
+    //return this.http.post<Customer[]>(this.baseUrl, dtos);
+}
+
+
 }

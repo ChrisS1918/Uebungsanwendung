@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { SystemInfo } from './SystemInfo';
 import { map } from 'rxjs/operators';
 import { plainToClass } from 'class-transformer';
-import { Customer } from '../kunden/Customer';
+import { Customer } from '../kunden/Kunde';
 
 @Injectable({
   providedIn: 'root'

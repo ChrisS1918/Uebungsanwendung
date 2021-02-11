@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UebungApi.Addresses;
+using UebungApi.Customers;
 
 namespace UebungsProjekt.Db
 {
@@ -15,5 +16,6 @@ namespace UebungsProjekt.Db
         }
 
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Customer } from '../kunden/Customer';
+import { Customer } from '../kunden/Kunde';
 import { InfoService } from './info.service';
 import { SystemInfo } from './SystemInfo';
 
