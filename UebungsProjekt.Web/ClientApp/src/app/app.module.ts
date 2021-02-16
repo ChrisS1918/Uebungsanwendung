@@ -11,13 +11,16 @@ import { MaterialModule } from './shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfoComponent } from './info/info.component';
 import { ReadKundenComponent } from './kunden/read-kunden/read-kunden.component';
+import { FormsModule } from '@angular/forms';
+import { RechnungErstellenComponent } from './rechnungen/rechnung-erstellen/rechnung-erstellen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     InfoComponent,
-    ReadKundenComponent
+    ReadKundenComponent,
+    RechnungErstellenComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { ReadKundenComponent } from './kunden/read-kunden/read-kunden.component'
     AdressenModule,
     HttpClientModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

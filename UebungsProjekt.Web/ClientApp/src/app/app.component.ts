@@ -15,6 +15,7 @@ export class AppComponent {
     { text: 'Adresse anlegen', link: 'adresse-anlegen' },
     { text: 'Info', link: 'info' },
     { text: 'Kunden', link: 'kunden' },
+    { text: 'Rechnungen', link: 'rechnungen' },
   ]
 
   navigate(route) {

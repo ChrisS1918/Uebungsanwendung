@@ -1,0 +1,140 @@
+
+<h1>Umschalter Form <-> Json?</h1>
+
+<div class="content" role="main">
+    <div class="createAdressContainer">
+      <h1>Rechnung erstellen</h1>
+      <form #form="ngForm">
+
+        <h5>Informationen Rechnungssteller</h5>
+
+        <div class="inputContainer">
+          <mat-form-field>
+            <mat-label>Firmenname</mat-label>
+            <input matInput ngModel name="firmenname">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Straße</mat-label>
+            <input matInput ngModel name="straße">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+        </div>
+        <div class="inputContainer">
+          <mat-form-field>
+            <mat-label>PLZ</mat-label>
+            <input matInput ngModel name="plz">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Ort</mat-label>
+            <input matInput ngModel name="ort">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+        </div>
+        <div class="inputContainer">
+          <mat-form-field>
+            <mat-label>Telefon</mat-label>
+            <input matInput ngModel name="telefon">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Fax</mat-label>
+            <input matInput ngModel name="fax">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+        </div>
+        <div class="inputContainer">
+          <mat-form-field>
+            <mat-label>Webseite</mat-label>
+            <input matInput ngModel name="webseite">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput ngModel name="email">
+            <button mat-icon-button matSuffix>
+            </button>
+          </mat-form-field>
+        </div>
+
+          <br><br>
+          <h5>Informationen Rechnungsempfänger</h5>
+
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>Rechungsnummer</mat-label>
+              <input matInput ngModel name="rechnungsnummer">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Rechnungsempfänger</mat-label>
+              <input matInput ngModel name="rechnungsempfänger">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>Firmenname</mat-label>
+              <input matInput ngModel name="firmenname_empfänger">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Kundennummer</mat-label>
+              <input matInput ngModel name="kundennummer">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>PLZ</mat-label>
+              <input matInput ngModel name="plz_empfänger">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Ort</mat-label>
+              <input matInput ngModel name="ort_empfänger">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>Straße</mat-label>
+              <input matInput ngModel name="straße_empfänger">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Telefon</mat-label>
+              <input matInput ngModel name="telefon_empfänger">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
+
+
+
+
+        <br>
+        <button type="submit" class="submitButton" (click)="createInvoice()" mat-raised-button color="primary">Erstellen</button>
+        <button type="submit" class="submitButton" (click)="setOwnInformations()" mat-raised-button color="primary">Setze eigene Anschrift</button>
+        <button type="submit" class="submitButton" (click)="setTestData()" mat-raised-button color="primary">Setze Testdaten</button>
+      </form>
+    </div>
+  </div>
+  
+
+

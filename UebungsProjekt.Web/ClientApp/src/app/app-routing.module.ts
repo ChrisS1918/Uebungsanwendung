@@ -5,6 +5,7 @@ import { AdresseAnlegenComponent } from './adressen-verwalten/adresse-anlegen/ad
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InfoComponent } from './info/info.component';
 import { ReadKundenComponent } from './kunden/read-kunden/read-kunden.component';
+import { RechnungErstellenComponent } from './rechnungen/rechnung-erstellen/rechnung-erstellen.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'start', component: DashboardComponent},
   { path: 'info', component: InfoComponent},
   { path: 'kunden', component: ReadKundenComponent},
+  { path: 'rechnungen', component: RechnungErstellenComponent},
 ];
 
 @NgModule({
