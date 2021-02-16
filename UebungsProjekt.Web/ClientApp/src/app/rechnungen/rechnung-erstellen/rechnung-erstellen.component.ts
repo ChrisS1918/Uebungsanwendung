@@ -16,6 +16,7 @@ export class RechnungErstellenComponent implements OnInit {
   constructor(private rechnungService: RechnungService) { }
 
   rechnung: Rechnung;
+  rechnungPDF;
 
   dto;
   ngOnInit() {
@@ -68,7 +69,7 @@ export class RechnungErstellenComponent implements OnInit {
    ))
    console.log(JSON.stringify(this.dto));
    this.config.postedData = this.dto;
-   this.rechnungService.createInvoice(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => console.log(r));
+   this.rechnungService.createInvoice(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => console.log(this.rechnungPDF = r));
   }
 
   setOwnInformations() {
@@ -101,6 +102,20 @@ export class RechnungErstellenComponent implements OnInit {
       billto_street: "Dingensstraße 94",
       billto_phone: "030340340934"
     });
+  }
+
+  
+  downloadPdf(base64String, fileName) {
+    const source = `data:application/pdf;base64,${this.rechnungPDF}`;
+    const link = document.createElement("a");
+    link.href = source;
+    link.download = `${fileName}.pdf`
+    link.click();
+  }
+
+  onClickDownloadPdf(){
+    let base64String = this.rechnungPDF;
+    this.downloadPdf(base64String,"sample");
   }
 
 }
