@@ -2,6 +2,7 @@
 <h1>Umschalter Form <-> Json?</h1>
 
 <div class="content" role="main">
+
     <div class="createAdressContainer">
       <h1>Rechnung erstellen</h1>
       <form #form="ngForm">
@@ -125,14 +126,63 @@
             </mat-form-field>
           </div>
 
+          <br><br>
+          <h5>Informationen Empfänger</h5>
 
-
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>Firmenname</mat-label>
+              <input matInput ngModel name="recipient_companyname">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Kundennummer</mat-label>
+              <input matInput ngModel name="recipient_name">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>PLZ</mat-label>
+              <input matInput ngModel name="recipient_zip">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Ort</mat-label>
+              <input matInput ngModel name="recipient_city">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="inputContainer">
+            <mat-form-field>
+              <mat-label>Straße</mat-label>
+              <input matInput ngModel name="recipient_street">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Telefon</mat-label>
+              <input matInput ngModel name="recipient_phone">
+              <button mat-icon-button matSuffix>
+              </button>
+            </mat-form-field>
+          </div>
 
         <br>
-        <button type="submit" class="submitButton" (click)="createInvoice()" mat-raised-button color="primary">Erstellen</button>
-        <!--<button type="submit" class="submitButton" (click)="setOwnInformations()" mat-raised-button color="primary">Setze eigene Anschrift</button>-->
-        <button type="submit" class="submitButton" (click)="setTestData()" mat-raised-button color="primary">Setze Testdaten</button>
-        <button type="submit" class="submitButton" (click)="downloadPdf()" mat-raised-button color="primary">PDF Download</button>
+        <div *ngIf="isLoading == false">
+          <button *ngIf="rechnungPDF" type="submit" class="submitButton" (click)="downloadPdf()" mat-raised-button color="primary">PDF Download</button>
+          <button type="submit" class="submitButton" (click)="createInvoice()" mat-raised-button color="primary">Erstellen</button>
+          <!--<button type="submit" class="submitButton" (click)="setOwnInformations()" mat-raised-button color="primary">Setze eigene Anschrift</button>-->
+          <button type="submit" class="submitButton" (click)="setTestData()" mat-raised-button color="primary">Setze Testdaten</button>
+        </div>
+        
+        <div *ngIf="isLoading == true" class="center">
+          <mat-spinner ></mat-spinner>
+        </div>
       </form>
     </div>
   </div>
