@@ -43,8 +43,8 @@ export class Item {
     item_total: string;
 }
 
-//export class RootObject {
-//    mergeData: MergeData[];
-//    template?: any;
-//    mergeSettings?: any;
-//}
+export class RootObject {
+    mergeData: Rechnung[];
+    template?: any;
+    mergeSettings?: any;
+}

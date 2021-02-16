@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { CreateRechnungDto } from 'src/app/api/rechnungen/create-rechnung-dto';
+import { CreateRechnungDto, RootObject } from 'src/app/api/rechnungen/create-rechnung-dto';
+import { reportingcloudConfiguration } from 'src/app/httpConfigurations';
 import { Rechnung } from 'src/app/rechnungen/Rechnung';
 import { RechnungService } from '../rechnung.service';
 
@@ -10,18 +11,24 @@ import { RechnungService } from '../rechnung.service';
   styleUrls: ['./rechnung-erstellen.component.css']
 })
 export class RechnungErstellenComponent implements OnInit {
+  config: reportingcloudConfiguration
   @ViewChild('form', {static: false}) form: NgForm;
   constructor(private rechnungService: RechnungService) { }
 
   rechnung: Rechnung;
 
+  dto;
   ngOnInit() {
+    this.config = new reportingcloudConfiguration();
   }
 
 
   createInvoice() {
+  this.dto = new RootObject();
+  this.dto.mergeData = Array<CreateRechnungDto>();
+
    this.rechnung = this.form.value;
-   const dto = new CreateRechnungDto(
+   this.dto.mergeData.push(new CreateRechnungDto(
     this.rechnung.yourcompany_companyname ? this.rechnung.yourcompany_companyname : undefined,
     this.rechnung.yourcompany_zip ? this.rechnung.yourcompany_zip : undefined,
     this.rechnung.yourcompany_city ? this.rechnung.yourcompany_city : undefined,
@@ -58,24 +65,13 @@ export class RechnungErstellenComponent implements OnInit {
     this.rechnung.total_tax ? this.rechnung.total_tax : undefined,
     this.rechnung.total ? this.rechnung.total : undefined,
      
-   )
-   this.rechnungService.create(dto).subscribe();
-   console.log(dto);
+   ))
+   console.log(JSON.stringify(this.dto));
+   this.config.postedData = this.dto;
+   this.rechnungService.createInvoice(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => console.log(r));
   }
 
   setOwnInformations() {
-    //this.form.setValue({
-    //  firmenname: "Test",
-    //  straße: "Test",
-    //  ort: "Test",
-    //  plz: "Test",
-    //  fax: "Test",
-    //  telefon: "Test",
-    //  email: "Test",
-    //  webseite: "Test",
-    //  rechnungsnummer: "Test"
-    //});
-
     this.form.controls['firmenname'].setValue("Quality Bytes GmbH");
     this.form.controls['straße'].setValue("Brunnenstraße 21");
     this.form.controls['plz'].setValue("53498");
@@ -88,22 +84,22 @@ export class RechnungErstellenComponent implements OnInit {
 
   setTestData() {
     this.form.setValue({
-      firmenname: "Quality Bytes GmbH",
-      straße: "Brunnenstraße 21",
-      ort: "Bad Breisig",
-      plz: "53498",
-      fax: "",
-      telefon: "+49 2633 48 99 430",
-      email: "www.qualitybytes.de",
-      webseite: "info@qualitybytes.de",
-      rechnungsnummer: "RN-1101",
-      rechnungsempfänger: "Dirk Bauer",
-      firmenname_empfänger: "Höfer System Solutions",
-      kundennummer: "10001",
-      plz_empfänger: "50667",
-      ort_empfänger: "Köln",
-      straße_empfänger: "Dingensstraße 94",
-      telefon_empfänger: "030340340934"
+      yourcompany_companyname: "Quality Bytes GmbH",
+      yourcompany_street: "Brunnenstraße 21",
+      yourcompany_city: "Bad Breisig",
+      yourcompany_zip: "53498",
+      yourcompany_fax: "",
+      yourcompany_phone: "+49 2633 48 99 430",
+      yourcompany_email: "www.qualitybytes.de",
+      yourcompany_url: "info@qualitybytes.de",
+      invoice_no: "RN-1101",
+      billto_name: "Dirk Bauer",
+      billto_companyname: "Höfer System Solutions",
+      billto_customerid: "10001",
+      billto_zip: "50667",
+      billto_city: "Köln",
+      billto_street: "Dingensstraße 94",
+      billto_phone: "030340340934"
     });
   }
 

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Customer } from '../Kunde';
 import { KundenService } from '../kunden.service';
 import { CreateKundenDto } from 'src/app/api/kunden/create-kunden-dto';
+import { fastBillConfiguration } from 'src/app/httpConfigurations';
 
 @Component({
   selector: 'app-read-kunden',
@@ -13,29 +14,14 @@ export class ReadKundenComponent implements OnInit {
 
   constructor(private readonly kundenService: KundenService) { }
   kunden: Customer[];
+  config: fastBillConfiguration
   displayedColumns: string[] = ['CUSTOMER_ID', 'ORGANIZATION', 'ADDRESS', 'CITY', 'ZIPCODE', 'COUNTRY_CODE'];
-
-  //fastBill request informations
-  username = 'fastTest@tempr.email';
-  passwordAsApiKey = 'ac6c60f49f195c1f0d91dae6d1bd02790GFHWcg3MEg0uFiGHdkgohxrlY9FjokL'
-  url = 'https://my.fastbill.com/api/1.0/api.php?OFFSET=CUSTOMERS&=';
-  postedData = `
-  {
-    "SERVICE": "customer.get" 
-  }`;
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json', //<- To SEND XML
-      'Accept': 'application/json',       //<- To ask for XML
-      'Authorization': 'Basic ' + btoa(this.username + ':' + this.passwordAsApiKey)
-    })
-  };
-
   dtos: CreateKundenDto[];
 
   ngOnInit() {
+    this.config = new fastBillConfiguration();
     console.log("GetCustomers:");
-    this.kundenService.getCustomers(this.url, this.postedData, this.httpOptions).subscribe(r => console.log(this.kunden = r));
+    this.kundenService.getCustomers(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => console.log(this.kunden = r));
   }
 
   saveCustomers() {

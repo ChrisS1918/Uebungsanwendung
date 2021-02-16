@@ -1,5 +1,7 @@
 import { Item } from "src/app/rechnungen/Rechnung";
 
+
+
 export class CreateRechnungDto {
     constructor(
         public readonly yourcompany_companyname: string,
@@ -36,4 +38,11 @@ export class CreateRechnungDto {
         public readonly total_tax: string,
         public readonly total: string,
     ) { }
+
+}
+
+export class RootObject {
+    mergeData: CreateRechnungDto[];
+    template?: any;
+    mergeSettings?: any;
 }
