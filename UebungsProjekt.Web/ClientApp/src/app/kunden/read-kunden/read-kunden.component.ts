@@ -15,7 +15,7 @@ export class ReadKundenComponent implements OnInit {
   constructor(private readonly kundenService: KundenService) { }
   kunden: Customer[];
   config: fastBillConfiguration
-  displayedColumns: string[] = ['CUSTOMER_ID', 'ORGANIZATION', 'ADDRESS', 'CITY', 'ZIPCODE', 'COUNTRY_CODE'];
+  displayedColumns: string[] = ['CUSTOMER_ID', 'ORGANIZATION', 'ADDRESS', 'CITY', 'ZIPCODE', 'COUNTRY_CODE', 'INVOICEBTN'];
   dtos: CreateKundenDto[];
 
   ngOnInit() {
@@ -73,6 +73,10 @@ export class ReadKundenComponent implements OnInit {
     }
   this.kundenService.createFromArray(this.dtos).subscribe();
 
+  }
+
+  createInvoice(Kunde) {
+    console.log(Kunde)
   }
 
 }
