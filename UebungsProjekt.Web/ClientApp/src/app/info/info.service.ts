@@ -22,7 +22,6 @@ export class InfoService {
     .pipe(
       map(
         result => { 
-          //console.log(result);  //<- XML response is in here *as plain text*
           const response = new DOMParser().parseFromString(result as unknown as string, "text/xml").querySelector('RESPONSE').firstElementChild; //Zieht aus XML den RESPONSE-Tag und davon das first element child
           const children = Array.from(response.children);
           if(response.tagName === 'ERRORS') {

@@ -72,7 +72,7 @@ export class ReadKundenComponent implements OnInit {
         )
       );
     }
-  this.kundenService.Import().subscribe( r => this.kundenService.getlocalCustomers().subscribe(r => console.log(this.kunden = r.data)));
+  this.kundenService.Import().subscribe( r => this.kundenService.getlocalCustomers().subscribe(r => this.kunden = r.data));
 
   }
 
