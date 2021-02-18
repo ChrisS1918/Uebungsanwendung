@@ -32,7 +32,7 @@ namespace UebungsProjekt.Db.Customers
         public async Task<IResult<List<Customer>>> ExecuteAsync(CancellationToken cancellationToken)
         {
             var query = _db.Customers
-                .OrderBy(x => x.ORGANIZATION.ToLower())
+                .OrderBy(x => x.Organization.ToLower())
                 .AsQueryable();
             return Result.For(await query.ToListAsync());
         }

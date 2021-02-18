@@ -10,8 +10,8 @@ using UebungsProjekt.Db;
 namespace UebungsProjekt.Db.Migrations
 {
     [DbContext(typeof(UebungsContext))]
-    [Migration("20210211125254_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210217133004_initialMigrations")]
+    partial class initialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,124 +47,124 @@ namespace UebungsProjekt.Db.Migrations
 
             modelBuilder.Entity("UebungApi.Customers.Customer", b =>
                 {
-                    b.Property<string>("CUSTOMER_ID")
+                    b.Property<string>("CustomerId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("ACADEMIC_DEGREE")
+                    b.Property<string>("AcademicDegree")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ADDRESS")
+                    b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ADDRESS_2")
+                    b.Property<string>("Address2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_ACCOUNT_MANDATE_REFERENCE")
+                    b.Property<string>("BankAccountMandateReference")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_ACCOUNT_NUMBER")
+                    b.Property<string>("BankAccountNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_ACCOUNT_OWNER")
+                    b.Property<string>("BankAccountOwner")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_BIC")
+                    b.Property<string>("BankBIC")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_CODE")
+                    b.Property<string>("BankCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_IBAN")
+                    b.Property<string>("BankIBAN")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BANK_NAME")
+                    b.Property<string>("BankName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CITY")
+                    b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("COUNTRY_CODE")
+                    b.Property<string>("CountryCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CREATED")
+                    b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CURRENCY_CODE")
+                    b.Property<string>("CurrencyCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CUSTOMER_ACCOUNT")
+                    b.Property<string>("CustomerAccount")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CUSTOMER_NUMBER")
+                    b.Property<string>("CustomerNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CUSTOMER_TYPE")
+                    b.Property<string>("CustomerType")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DAYS_FOR_PAYMENT")
+                    b.Property<string>("DaysForPayment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EMAIL")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FAX")
+                    b.Property<string>("Fax")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FIRST_NAME")
+                    b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LASTUPDATE")
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastUpdate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("LAST_NAME")
+                    b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MOBILE")
+                    b.Property<string>("NewsletterOptin")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NEWSLETTER_OPTIN")
+                    b.Property<string>("Organization")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ORGANIZATION")
+                    b.Property<string>("PaymentType")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PAYMENT_TYPE")
+                    b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PHONE")
+                    b.Property<string>("Phone2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PHONE_2")
+                    b.Property<string>("Position")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("POSITION")
+                    b.Property<string>("Salutation")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SALUTATION")
+                    b.Property<string>("SecondaryAddress")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SECONDARY_ADDRESS")
+                    b.Property<string>("SowPaymentNotice")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SHOW_PAYMENT_NOTICE")
+                    b.Property<string>("Tags")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TAGS")
+                    b.Property<string>("Top")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TOP")
+                    b.Property<string>("VatId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("VAT_ID")
+                    b.Property<string>("Website")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("WEBSITE")
+                    b.Property<string>("ZipCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ZIPCODE")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CUSTOMER_ID");
+                    b.HasKey("CustomerId");
 
                     b.ToTable("Customers");
                 });

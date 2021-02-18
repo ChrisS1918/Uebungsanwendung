@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using QualityBytes.Core.Web.Extensions;
@@ -18,14 +19,9 @@ namespace UebungsProjekt.Web.Controllers.kunden
 
 
         [HttpPost("api/kunden")]
-        public async Task<IActionResult> PostAsync(CreateCustomerDto[] dtos)
+        public async Task<IActionResult> PostAsync(CancellationToken cancellationToken)
         {
-            var result = await _useCase.ExecuteAsync(dtos);
-            if(!result.Success)
-            {
-                return BadRequest();
-            }
-            return Ok();
+            return await _useCase.ExecuteAsync(cancellationToken).ToActionResultAsync();
         }
     }
 }

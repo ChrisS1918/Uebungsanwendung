@@ -17,32 +17,32 @@
 
                         <ng-container matColumnDef="CUSTOMER_ID">
                             <th mat-header-cell *matHeaderCellDef> ID </th>
-                            <td mat-cell *matCellDef="let kunde"> {{kunde.CUSTOMER_ID}} </td>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.customerid}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="ORGANIZATION">
                             <th mat-header-cell *matHeaderCellDef> Name </th>
-                            <td mat-cell *matCellDef="let kunde"> {{kunde.ORGANIZATION}} </td>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.organization}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="ADDRESS">
                             <th mat-header-cell *matHeaderCellDef> Adresse </th>
-                            <td mat-cell *matCellDef="let kunde"> {{kunde.ADDRESS}} </td>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.address}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="CITY">
                             <th mat-header-cell *matHeaderCellDef> Ort </th>
-                            <td mat-cell *matCellDef="let kunde"> {{kunde.CITY}} </td>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.city}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="ZIPCODE">
                             <th mat-header-cell *matHeaderCellDef> PLZ </th>
-                            <td mat-cell *matCellDef="let kunde"> {{kunde.ZIPCODE}} </td>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.zipcode}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="COUNTRY_CODE">
                             <th mat-header-cell *matHeaderCellDef> Ländercode </th>
-                            <td mat-cell *matCellDef="let kunde"> {{kunde.COUNTRY_CODE}} </td>
+                            <td mat-cell *matCellDef="let kunde"> {{kunde.countrycode}} </td>
                         </ng-container>
 
                         <ng-container matColumnDef="INVOICEBTN">
@@ -54,7 +54,7 @@
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
                     </table>
-                    <button mat-button (click)="saveCustomers()">Kunden lokal speichern</button>
+                    <button mat-button (click)="saveCustomers()">Kunden importieren</button>
 
                 </div>
             </mat-expansion-panel>

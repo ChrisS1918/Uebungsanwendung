@@ -1,4 +1,3 @@
-import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../Kunde';
 import { KundenService } from '../kunden.service';
@@ -21,7 +20,9 @@ export class ReadKundenComponent implements OnInit {
   ngOnInit() {
     this.config = new fastBillConfiguration();
     console.log("GetCustomers:");
-    this.kundenService.getCustomers(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => console.log(this.kunden = r));
+    //this.kundenService.getCustomers(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => console.log(this.kunden = r));
+    //Abfrage im "Hintergrund", dazu Import-Button
+    this.kundenService.getlocalCustomers().subscribe(r => console.log(this.kunden = r.data));
   }
 
   saveCustomers() {
@@ -71,7 +72,7 @@ export class ReadKundenComponent implements OnInit {
         )
       );
     }
-  this.kundenService.createFromArray(this.dtos).subscribe();
+  this.kundenService.Import().subscribe();
 
   }
 

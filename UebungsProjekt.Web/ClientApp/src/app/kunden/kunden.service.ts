@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { BaseService } from '../api/baseService';
 import { CreateKundenDto } from '../api/kunden/create-kunden-dto';
 import { UpdateKundenDto } from '../api/kunden/update-kunde-dto';
+import { Result } from '../api/Result';
 import { Customer } from './Kunde';
 
 @Injectable({
@@ -31,11 +32,14 @@ export class KundenService extends BaseService<Customer, CreateKundenDto, Update
     );
   }
 
+  getlocalCustomers() {
+    return this.http.get<Result<Customer>>(this.baseUrl);
+  }
+
 
   
-  createFromArray(dtos) {
-    console.log("Baseurl: " + this.baseUrl);
-    return this.http.post<Customer[]>(this.baseUrl, dtos);
+  Import() {
+    return this.http.post(this.baseUrl, null);
 }
 
 

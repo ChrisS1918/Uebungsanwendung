@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +26,7 @@ namespace UebungsProjekt.Web.Controllers.kunden
         /// Gibt eine Liste von Kunden-Datensätzen zurück
         /// </summary>
         [HttpGet("api/kunden")]
-        public async Task<ActionResult<IPagedResult<Customer>>> GetAsync(CancellationToken cancellationToken)
+        public async Task<ActionResult<List<Customer>>> GetAsync(CancellationToken cancellationToken)
         {
             return await _useCase.ExecuteAsync(cancellationToken)
                 .ToActionResultAsync();

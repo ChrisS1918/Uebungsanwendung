@@ -10,6 +10,6 @@ namespace UebungsProjekt.Customers.CreateCustomer
 {
     public interface ICreateCustomerCommand : IAnyCommand
     {
-        Task<IResult<Customer[]>> ExecuteAsync(CreateCustomerDto[] dtos);
+        Task<IResult<Customer[]>> ExecuteAsync(List<CreateCustomerDto> dtos);
     }
 }

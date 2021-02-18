@@ -8,7 +8,7 @@ namespace UebungsProjekt.Db.Customers
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
-            builder.HasKey(x => x.CUSTOMER_ID);
+            builder.HasKey(x => x.CustomerId);
         }
     }
 }
