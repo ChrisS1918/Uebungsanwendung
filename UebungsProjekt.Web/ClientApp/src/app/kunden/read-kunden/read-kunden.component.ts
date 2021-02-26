@@ -3,6 +3,7 @@ import { Customer } from '../Kunde';
 import { KundenService } from '../kunden.service';
 import { CreateKundenDto } from 'src/app/api/kunden/create-kunden-dto';
 import { fastBillConfiguration } from 'src/app/httpConfigurations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-read-kunden',
@@ -11,7 +12,7 @@ import { fastBillConfiguration } from 'src/app/httpConfigurations';
 })
 export class ReadKundenComponent implements OnInit {
 
-  constructor(private readonly kundenService: KundenService) { }
+  constructor(private readonly kundenService: KundenService, public router: Router) { }
   kunden: Customer[];
   config: fastBillConfiguration
   displayedColumns: string[] = ['CUSTOMER_ID', 'ORGANIZATION', 'ADDRESS', 'CITY', 'ZIPCODE', 'COUNTRY_CODE', 'INVOICEBTN'];
@@ -76,8 +77,10 @@ export class ReadKundenComponent implements OnInit {
 
   }
 
-  createInvoice(Kunde) {
-    console.log(Kunde)
+  createInvoice(kunde) {
+    this.kundenService.storeLocalCustomer(kunde);
+    this.router.navigateByUrl('/rechnungen');
   }
+
 
 }

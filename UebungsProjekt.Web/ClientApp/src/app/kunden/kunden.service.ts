@@ -13,6 +13,7 @@ import { Customer } from './Kunde';
 export class KundenService extends BaseService<Customer, CreateKundenDto, UpdateKundenDto> {
 
   baseUrl = '/api/kunden';
+  storedCustomer: Customer;
 
   constructor(http: HttpClient) {
     super('/api/kunden', http);
@@ -40,6 +41,14 @@ export class KundenService extends BaseService<Customer, CreateKundenDto, Update
   
   Import() {
     return this.http.post(this.baseUrl, null);
+}
+
+
+storeLocalCustomer(customer){
+  this.storedCustomer = customer;
+}
+getstoredCustomer() {
+  return this.storedCustomer;
 }
 
 

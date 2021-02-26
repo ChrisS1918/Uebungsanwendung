@@ -24,8 +24,8 @@ namespace UebungsProjekt.Db.Customers
         private static readonly HttpClient http = new HttpClient();
         public ImportCustomersQuery(IOptions<FastbillSettings> options)
         {
-            options.Value.Username = "fastTest@tempr.email";
-            options.Value.Password = "ac6c60f49f195c1f0d91dae6d1bd02790GFHWcg3MEg0uFiGHdkgohxrlY9FjokL";
+            options.Value.Username = "testVersion@tempr.email";
+            options.Value.Password = "70fcc4202128ac4c38e8dfe47705955fbOXXsFpxHjY4nzWi4f4tfuVI28bdXPSq";
 
             http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.UTF8.GetBytes(options.Value.Username + ':' + options.Value.Password)));
             http.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

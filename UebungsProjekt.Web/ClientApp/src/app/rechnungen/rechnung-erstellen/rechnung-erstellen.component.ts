@@ -1,11 +1,13 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { CreateRechnungDto, RootObject } from 'src/app/api/rechnungen/create-rechnung-dto';
 import { reportingcloudConfiguration } from 'src/app/httpConfigurations';
 import { Rechnung } from 'src/app/rechnungen/Rechnung';
 import { RechnungService } from '../rechnung.service';
 
+import { KundenService } from 'src/app/kunden/kunden.service';
 @Component({
   selector: 'app-rechnung-erstellen',
   templateUrl: './rechnung-erstellen.component.html',
@@ -21,12 +23,37 @@ export class RechnungErstellenComponent implements OnInit {
 
   myDate: Date;
   myUtcDate;
+  storedCustomer;
 
 
 
-  constructor(private rechnungService: RechnungService) { }
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+// [ngModel] nutzen um dann auch den gewählten Kunden setzen zu können?
+
+
+
+
+
+  constructor(private rechnungService: RechnungService, private kundenService: KundenService, public activatedRoute: ActivatedRoute) { }
   ngOnInit() {
     this.config = new reportingcloudConfiguration();
+  }
+
+  ngAfterViewInit() {
+    this.fillData();
   }
 
   createInvoice() {
@@ -67,8 +94,8 @@ export class RechnungErstellenComponent implements OnInit {
       this.rechnung.recipient_city ? this.rechnung.recipient_city : undefined,
       this.rechnung.recipient_street ? this.rechnung.recipient_street : undefined,
       this.rechnung.recipient_phone ? this.rechnung.recipient_phone : undefined,
-      //Noch nicht in Form eingefügt:
 
+      //Noch nicht in Form eingefügt:
       this.rechnung.item ? this.rechnung.item : undefined,
       this.rechnung.total_discount ? this.rechnung.total_discount : undefined,
       this.rechnung.total_sub ? this.rechnung.total_sub : undefined,
@@ -78,18 +105,18 @@ export class RechnungErstellenComponent implements OnInit {
     ))
     this.config.postedData = this.dto;
     console.log(this.dto);
-    this.rechnungService.createInvoice(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => {this.rechnungPDF = r; this.isLoading = false;});
+    this.rechnungService.createInvoice(this.config.url, this.config.postedData, this.config.httpOptions).subscribe(r => { this.rechnungPDF = r; this.isLoading = false; });
   }
 
   setOwnInformations() {
-    this.form.controls['firmenname'].setValue("Quality Bytes GmbH");
-    this.form.controls['straße'].setValue("Brunnenstraße 21");
-    this.form.controls['plz'].setValue("53498");
-    this.form.controls['ort'].setValue("Bad Breisig");
-    this.form.controls['telefon'].setValue("+49 2633 48 99 430");
-    this.form.controls['fax'].setValue("");
-    this.form.controls['webseite'].setValue("www.qualitybytes.de");
-    this.form.controls['email'].setValue("info@qualitybytes.de");
+    this.form.controls['yourcompany_companyname'].setValue("Quality Bytes GmbH");
+    this.form.controls['yourcompany_street'].setValue("Brunnenstraße 21");
+    this.form.controls['yourcompany_zip'].setValue("53498");
+    this.form.controls['yourcompany_city'].setValue("Bad Breisig");
+    this.form.controls['yourcompany_phone'].setValue("+49 2633 48 99 430");
+    this.form.controls['yourcompany_fax'].setValue("");
+    this.form.controls['yourcompany_url'].setValue("www.qualitybytes.de");
+    this.form.controls['yourcompany_email'].setValue("info@qualitybytes.de");
   }
 
   setTestData() {
@@ -128,6 +155,32 @@ export class RechnungErstellenComponent implements OnInit {
     link.href = source;
     link.download = "Rechnung" + formatDate(new Date(), 'dd/MM/yyyy HH:mm:ss', 'en', '+0200');
     link.click();
+  }
+
+  fillData() {
+    this.storedCustomer = this.kundenService.getstoredCustomer();
+
+    this.setOwnInformations();
+
+    if (this.storedCustomer) {
+
+      this.form.controls['billto_name'].setValue(this.storedCustomer.firstName + " " + this.storedCustomer.lastName);
+      this.form.controls['billto_companyname'].setValue(this.storedCustomer.organization);
+      this.form.controls['billto_customerid'].setValue(this.storedCustomer.customerId);
+      this.form.controls['billto_zip'].setValue(this.storedCustomer.zipCode);
+      this.form.controls['billto_city'].setValue(this.storedCustomer.city);
+      this.form.controls['billto_street'].setValue(this.storedCustomer.address2);
+      this.form.controls['billto_phone'].setValue(this.storedCustomer.phone);
+
+      this.form.controls['recipient_name'].setValue(this.storedCustomer.firstName + " " + this.storedCustomer.lastName);
+      this.form.controls['recipient_companyname'].setValue(this.storedCustomer.organization);
+      this.form.controls['recipient_zip'].setValue(this.storedCustomer.zipCode);
+      this.form.controls['recipient_city'].setValue(this.storedCustomer.city);
+      this.form.controls['recipient_street'].setValue(this.storedCustomer.address2);
+      this.form.controls['recipient_phone'].setValue(this.storedCustomer.phone);
+    }
+
+
   }
 
 }
