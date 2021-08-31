@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "77dZQCQIsBl/kV1DMEVxRakHCym9R4/EOfJdToGZP4BCtpkkxFhLJicqBiCUkPV4F5KLVTCyLMVbsPQchmqOHg==",
+  "dgSpecHash": "tjQ5Mic3RcxcgS7RLgmak7rHX9/rxSLfV2/HSNRREhC510ja+876QuFzQWrfY2a0rcz7i6qW1P1J1BvaDgXW/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ChristianStark\\source\\repos\\Übungen\\UebungsProjektmitApi-Fastbill\\UebungsProjekt\\UebungsProjekt.csproj",
+  "projectFilePath": "c:\\Users\\ChristianStark\\source\\repos\\Übungen\\UebungsProjektmitApi-Fastbill\\UebungsProjekt\\UebungsProjekt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ChristianStark\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\ChristianStark\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
